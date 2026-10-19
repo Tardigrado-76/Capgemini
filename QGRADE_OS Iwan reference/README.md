@@ -58,11 +58,19 @@ graph TD
 ## 💎 Pilares Arquitectónicos de QGRADE_OS
 
 ### 1. El Ciclo Completo de White Coding (Pizarra ➔ Contrato ➔ Código ➔ Prueba)
-Conecta directamente con la [Proof Machine](file:///e:/PROYECTOS%20IA/NEW%20TOOLS/CAPGEMINI/IWAN%20-%20WHITE%20CODING%20HARNESS). Ningún agente escribe código en el vacío:
+Conecta directamente con la [Proof Machine](../WHITE%20CODING%20HARNESS). Ningún agente escribe código en el vacío:
 - **Whiteboard First:** Especificación formal mediante esquemas y diagramas.
 - **StepContract:** Bloqueo inmutable con hash SHA-256 e inspección sintáctica AST.
 - **Adversarial Evaluator:** Evaluación implacable mediante `pytest` en sandbox.
 - **HITL Approval Gate:** El humano mantiene la última palabra en operaciones sensibles según exige el Artículo 14 del EU AI Act.
+
+---
+
+## 📚 Documentación Técnica & Gobernanza de QGRADE_OS
+- 📖 [**Manual de Uso y Operación Detallado**](./MANUAL_DE_USO.md)
+- 🤖 [**Especificación y Gobernanza de Agentes (AGENTS.md)**](./AGENTS.md)
+- 🛠️ [**Catálogo de Skills Asignadas (SKILLS_REGISTRY.md)**](./SKILLS_REGISTRY.md)
+- 🔌 [**Integración de Servidores MCP Nativos (MCP_INTEGRATION.md)**](./MCP_INTEGRATION.md)
 
 ### 2. Cumplimiento Regulatorio Continuo (Compliance-as-Code Live Mesh)
 Elimina las auditorías manuales anuales. A través de sondas no intrusivas sobre los microservicios, el sistema evalúa en tiempo real:

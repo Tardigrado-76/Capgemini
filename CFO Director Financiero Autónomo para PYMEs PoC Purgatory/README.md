@@ -71,6 +71,12 @@ graph TD
 3. **Conectores ERP & Bancarios mediante Semantic Discovery Protocol:**
    - Carga dinámica y bajo demanda de conectores a A3 Innuva, Holded, Sage 50, ContaSOL, Stripe Billing y APIs PSD2 Open Banking, ahorrando hasta un 94% de contexto en llamadas de inferencia.
 
+## 📚 Documentación Técnica & Gobernanza
+- 📖 [**Manual de Uso y Operación Detallado**](./MANUAL_DE_USO.md)
+- 🤖 [**Especificación y Gobernanza de Agentes (AGENTS.md)**](./AGENTS.md)
+- 🛠️ [**Catálogo de Skills Asignadas (SKILLS_REGISTRY.md)**](./SKILLS_REGISTRY.md)
+- 🔌 [**Integración de Servidores MCP Nativos (MCP_INTEGRATION.md)**](./MCP_INTEGRATION.md)
+
 ---
 
 ## 🛠️ Guía de Inicio Rápido y Uso

@@ -83,6 +83,12 @@ Añada este bloque en su `claude_desktop_config.json`:
 }
 ```
 
+## 📚 Documentación Técnica & Gobernanza
+- 📖 [**Manual de Uso y Operación Detallado**](./MANUAL_DE_USO.md)
+- 🤖 [**Especificación y Gobernanza de Agentes (AGENTS.md)**](./AGENTS.md)
+- 🛠️ [**Catálogo de Skills Asignadas (SKILLS_REGISTRY.md)**](./SKILLS_REGISTRY.md)
+- 🔌 [**Integración de Servidores MCP Nativos (MCP_INTEGRATION.md)**](./MCP_INTEGRATION.md)
+
 ---
 
 ## 🚀 Inicio Rápido del Cockpit Ejecutivo
