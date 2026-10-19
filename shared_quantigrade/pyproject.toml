@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shared_quantigrade"
+version = "1.0.0"
+description = "Shared Quantigrade Design Tokens, Branding, and Common Assets"
+authors = [{name = "Quantigrade Engineering"}]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "reportlab>=4.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["shared_quantigrade*"]
