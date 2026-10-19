@@ -13,11 +13,11 @@ graph TD
     User --> CLI["CLI Maestro (__main__.py)"]
     
     subgraph EngineMatrix ["Matriz de Motores Supervisados"]
-        Cockpit -->|Supervisión HTTP / Healthcheck| C8501["CFO Autónomo (:8501)"]
-        Cockpit -->|Supervisión HTTP / Healthcheck| C8506["White Coding (:8506)"]
-        Cockpit -->|Supervisión HTTP / Healthcheck| C8507["Compliance Live Mesh (:8507)"]
-        Cockpit -->|Supervisión HTTP / Healthcheck| C8509["TAU-bench GAIA (:8509)"]
-        Cockpit -->|Supervisión HTTP / Healthcheck| C8510["Semantic Discovery (:8510)"]
+        Cockpit -->|Supervisión HTTP y Healthcheck| C8501["CFO Autónomo (:8501)"]
+        Cockpit -->|Supervisión HTTP y Healthcheck| C8506["White Coding (:8506)"]
+        Cockpit -->|Supervisión HTTP y Healthcheck| C8507["Compliance Live Mesh (:8507)"]
+        Cockpit -->|Supervisión HTTP y Healthcheck| C8509["TAU-bench GAIA (:8509)"]
+        Cockpit -->|Supervisión HTTP y Healthcheck| C8510["Semantic Discovery (:8510)"]
     end
 
     subgraph SecurityBunker ["Búnker Criptográfico & Auditoría"]

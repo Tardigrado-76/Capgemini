@@ -46,8 +46,8 @@
 
 ```mermaid
 graph LR
-    Council["Consejo de Jueces IA"] -->|Inspección Repo & SBOM| GH["github-mcp-server"]
+    Council["Consejo de Jueces IA"] -->|Inspección Repo y SBOM| GH["github-mcp-server"]
     Council -->|Evidencias Inmutables| PG["postgres-mcp-server"]
-    Council -->|Alertas CSIRT & EUR-Lex| SC["scrapling-mcp"]
+    Council -->|Alertas CSIRT y EUR-Lex| SC["scrapling-mcp"]
     Council -->|Auditoría Cloud DORA| AWS["aws-mcp"]
 ```

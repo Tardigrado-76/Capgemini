@@ -23,8 +23,8 @@ graph TD
     Monitor --> Scorer["EARS Lead Scorer Agent<br/><i>Execution, Accuracy, Robustness, Safety</i>"]
     
     Scorer --> DecisionGate{"Decisión de Certificación"}
-    DecisionGate -->|EARS >= 85 & 0 Vulnerabilidades| Pass["Certificado Oficial EU AI Act Art. 15"]
-    DecisionGate -->|EARS < 85 o Brechas de Seguridad| Quarantine["Pase a Cuarentena & Informe Forense"]
+    DecisionGate -->|EARS apto y cero vulnerabilidades| Pass["Certificado Oficial EU AI Act Art. 15"]
+    DecisionGate -->|EARS insuficiente o brechas detectadas| Quarantine["Pase a Cuarentena & Informe Forense"]
 ```
 
 ---

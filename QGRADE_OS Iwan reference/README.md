@@ -37,17 +37,17 @@ graph TD
         SDP["🔍 Semantic Discovery Protocol (Port 8510)<br/><i>Tier-0 Progressive Context Hydration</i>"]
     end
 
-    MS -->|Lanzamiento & Healthcheck| CFO
-    MS -->|Lanzamiento & Healthcheck| WCH
-    MS -->|Lanzamiento & Healthcheck| CMP
-    MS -->|Lanzamiento & Healthcheck| TAU
-    MS -->|Lanzamiento & Healthcheck| SDP
+    MS -->|Lanzamiento y Healthcheck| CFO
+    MS -->|Lanzamiento y Healthcheck| WCH
+    MS -->|Lanzamiento y Healthcheck| CMP
+    MS -->|Lanzamiento y Healthcheck| TAU
+    MS -->|Lanzamiento y Healthcheck| SDP
 
     WCH -.->|Contratos Sellados| ED
-    CMP -.->|Telemetría de Cumplimiento| ED
-    SDP -.->|Ahorro 85-94% Tokens| MS
-    TAU -.->|Métricas Adversariales| MS
-    CFO -.->|Asientos & Auditoría Contable| ED
+    CMP -.->|Telemetria de Cumplimiento| ED
+    SDP -.->|Ahorro radical de tokens| MS
+    TAU -.->|Metricas Adversariales| MS
+    CFO -.->|Asientos y Auditoria Contable| ED
 
     FW -->|Sanitización Ingress| MS
     SB -->|Ejecución Segura| MS

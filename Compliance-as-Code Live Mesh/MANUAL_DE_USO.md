@@ -22,8 +22,8 @@ graph TD
     Mesh --> RegulatoryEngines
     RegulatoryEngines --> Shield{"Escudo de Cumplimiento & HITL"}
     
-    Shield -->|100% Cumplimiento| Bunker["Búnker Criptográfico (Merkle SLSA L3+)"]
-    Shield -->|No Conformidad Crítica| Block["Bloqueo Preventivo de Despliegue"]
+    Shield -->|Cumplimiento total verificado| Bunker["Búnker Criptográfico (Merkle SLSA L3+)"]
+    Shield -->|No conformidad critica| Block["Bloqueo Preventivo de Despliegue"]
     
     Bunker --> Passport["Emisión de Pasaporte Judicial Oficial (PDF/JSON)"]
 ```

@@ -22,8 +22,8 @@ graph TD
     Telemetry --> Scorecard["Calculadora EARS (0% - 100%)<br/><i>GCR + TCP + AIR + CFR + PBA</i>"]
     Scorecard --> Verdict{"Dictamen Oficial"}
     
-    Verdict -->|EARS >= 85% & 0 Brechas| Pass["Certificado Oficial de Aprobación Art. 15"]
-    Verdict -->|EARS < 85% o Violación Crítica| Quarantine["Aislamiento en Cuarentena & Log Forense"]
+    Verdict -->|EARS apto y cero brechas| Pass["Certificado Oficial de Aprobación Art. 15"]
+    Verdict -->|EARS insuficiente o brecha critica| Quarantine["Aislamiento en Cuarentena & Log Forense"]
 ```
 
 ---

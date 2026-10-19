@@ -42,11 +42,11 @@ graph TD
         LIB["shared_quantigrade<br/><i>Tokens de Diseño, Logo & Canvas ReportLab</i>"]
     end
 
-    QG -->|Supervisión & Salud| WCH
-    QG -->|Supervisión & Salud| CMP
-    QG -->|Supervisión & Salud| SDP
-    QG -->|Supervisión & Salud| CFO
-    QG -->|Supervisión & Salud| TAU
+    QG -->|Supervisión y Salud| WCH
+    QG -->|Supervisión y Salud| CMP
+    QG -->|Supervisión y Salud| SDP
+    QG -->|Supervisión y Salud| CFO
+    QG -->|Supervisión y Salud| TAU
 
     WCH -.-> LIB
     CMP -.-> LIB

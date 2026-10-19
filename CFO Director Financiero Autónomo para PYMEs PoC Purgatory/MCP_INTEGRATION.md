@@ -59,8 +59,8 @@
 
 ```mermaid
 graph TD
-    CFO["Autonomous CFO Orchestrator"] -->|Cobros & Pasarela| STRIPE["stripe-mcp"]
-    CFO -->|Asientos Contables & ERP| ODOO["odoo-mcp-server"]
-    CFO -->|Libro Mayor & Proveedores| PG["postgres-mcp-server"]
+    CFO["Autonomous CFO Orchestrator"] -->|Cobros y Pasarela| STRIPE["stripe-mcp"]
+    CFO -->|Asientos Contables y ERP| ODOO["odoo-mcp-server"]
+    CFO -->|Libro Mayor y Proveedores| PG["postgres-mcp-server"]
     CFO -->|Alertas HITL a Dirección| MG["mailgun-mcp-server"]
 ```

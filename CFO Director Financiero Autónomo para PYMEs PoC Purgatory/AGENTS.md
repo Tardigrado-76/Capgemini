@@ -22,8 +22,8 @@ graph TD
     Orchestrator --> TreasurySwarm
     TreasurySwarm --> EvaluationEngine{"Motor de Evaluación de Riesgo"}
     
-    EvaluationEngine -->|Riesgo < 20 & Monto < 1.000€| AutoExec["Ejecución Automática Bancaria SEPA"]
-    EvaluationEngine -->|Riesgo >= 20 o Monto >= 1.000€| HITL["HITL Approval Gate (Director Humano)"]
+    EvaluationEngine -->|Riesgo bajo y Monto menor a 1000 EUR| AutoExec["Ejecución Automática Bancaria SEPA"]
+    EvaluationEngine -->|Riesgo elevado o Monto mayor a 1000 EUR| HITL["HITL Approval Gate (Director Humano)"]
     
     AutoExec --> Ledger["Libro Mayor Inmutable SHA-256"]
     HITL --> Ledger

@@ -44,7 +44,7 @@ graph TD
     CONTRACT --> AGENT
     AGENT --> TEST
     TEST -->|Fallo o Límite Excedido| HITL
-    TEST -->|Validación 100%| Bunker
+    TEST -->|Validación total superada| Bunker
     HITL -->|Aprobación Arquitecto| Bunker
 ```
 

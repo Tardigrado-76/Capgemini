@@ -21,8 +21,8 @@ graph TD
     CFOEngine --> Swarm
     Swarm --> RiskGate{"Umbral de Riesgo & Cuantía"}
     
-    RiskGate -->|Riesgo < 20 & Monto < 1.000€| AutoExecute["Conciliación & Orden de Pago Automática"]
-    RiskGate -->|Riesgo >= 20 o Monto >= 1.000€| HITL["Pasarela HITL 4-Ojos (Aprobación Director)"]
+    RiskGate -->|Riesgo bajo y Monto menor a 1000 EUR| AutoExecute["Conciliación & Orden de Pago Automática"]
+    RiskGate -->|Riesgo elevado o Monto mayor a 1000 EUR| HITL["Pasarela HITL 4-Ojos (Aprobación Director)"]
     
     AutoExecute --> Ledger["Libro Mayor Inmutable SHA-256"]
     HITL --> Ledger

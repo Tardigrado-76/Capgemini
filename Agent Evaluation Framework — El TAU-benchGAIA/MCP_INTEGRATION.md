@@ -50,7 +50,7 @@
 
 ```mermaid
 graph LR
-    Harness["Benchmark Orchestrator"] -->|Navegación Web Real (GAIA)| PUPPETEER["puppeteer-mcp"]
+    Harness["Benchmark Orchestrator"] -->|Navegación Web Real GAIA| PUPPETEER["puppeteer-mcp"]
     Harness -->|Fuentes Web de Estrés| SCRAPLING["scrapling-mcp"]
     Harness -->|Alertas a Ingeniería| SLACK["slack-mcp-server"]
     Harness -->|Historial de Benchmarks EARS| PG["postgres-mcp-server"]
