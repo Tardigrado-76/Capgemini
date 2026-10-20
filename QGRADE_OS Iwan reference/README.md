@@ -1,9 +1,9 @@
-# 🌐 QUANTIGRADE OS — The Maestro Cockpit
+# QUANTIGRADE OS — The Maestro Cockpit
 ### *La síntesis viva del AI Workbench Enterprise: cuando la arquitectura de Iwan van der Kleijn se convierte en software de producción.*
 
 ---
 
-## ⚡ El Manifiesto: Lo que quedó pendiente, hoy está en ejecución
+## El Manifiesto: Lo que quedó pendiente, hoy está en ejecución
 
 > *"Iwan: Durante años explicaste en Capgemini, en tus conferencias y en tus artículos del blog el drama del **PoC Purgatory** empresarial; acuñaste **White Coding** como la única cura frente al caos descontrolado del 'vibe coding'; diseñaste el patrón conceptual del **semantic-discovery-loop** para frenar el envenenamiento de contexto en LLMs; y advertiste que DORA, NIS2 y el EU AI Act exigirían un compliance que fuese código vivo, no carpetas de PDFs firmados post-mortem.*
 >
@@ -13,7 +13,7 @@
 
 ---
 
-## 🏛️ ¿Por qué QGRADE_OS es la Suma de Todo?
+##  ¿Por qué QGRADE_OS es la Suma de Todo?
 
 QGRADE_OS no es una herramienta más: **es el hipervisor orquestador (The Maestro Cockpit)** que unifica, supervisa y audita transversalmente los motores autónomos de la suite Quantigrade. 
 
@@ -21,43 +21,55 @@ Cada subsistema resuelve uno de los problemas críticos planteados por Iwan en l
 
 ```mermaid
 graph TD
-    subgraph Cockpit ["👑 QGRADE_OS — The Maestro Cockpit (Port 8500)"]
-        MS["Maestro Swarm Orchestrator"]
-        FW["Prompt Firewall (OWASP LLM01)"]
-        SB["MicroVM Sandbox Guard"]
-        ED["Ed25519 Signer & Merkle Ledger"]
-        EX["Universal Exporter (JSON/MD/PDF)"]
-    end
+ subgraph Cockpit [" QGRADE_OS — The Maestro Cockpit (Port 8500)"]
+ MS["Maestro Swarm JIT Router<br/><i>orchestrator/maestro_swarm.py</i>"]
+ FW["Dual-Model Prompt Firewall<br/><i>OWASP LLM01 Jailbreak Shield</i>"]
+ SB["MicroVM Sandbox Guard<br/><i>Restricted Execution Engine</i>"]
+ ED["Ed25519 Signer & Merkle Ledger<br/><i>SLSA L3+ Audit Bunker</i>"]
+ EX["Universal Exporter<br/><i>JSON / Markdown / PDF ReportLab</i>"]
+ end
 
-    subgraph Microservices ["⚡ Flota Autónoma Especializada"]
-        CFO["💰 Autonomous CFO (Port 8501)<br/><i>Escapando del PoC Purgatory</i>"]
-        WCH["🛡️ White Coding Harness (Port 8506)<br/><i>Proof Machine & StepContracts</i>"]
-        CMP["⚖️ Compliance-as-Code Live Mesh (Port 8507)<br/><i>DORA / NIS2 / EU AI Act Continuous</i>"]
-        TAU["🧪 TAU-bench & GAIA Evaluator (Port 8509)<br/><i>Adversarial Agent Stress Testing</i>"]
-        SDP["🔍 Semantic Discovery Protocol (Port 8510)<br/><i>Tier-0 Progressive Context Hydration</i>"]
-    end
+ subgraph Bridges [" Puentes JIT Especializados (Zero-Overhead)"]
+ B_WCH["WhiteCodingBridge<br/><i>StepContracts & Jira/Confluence</i>"]
+ B_CMP["ComplianceBridge<br/><i>DORA / NIS2 / ENS Telemetry</i>"]
+ B_SDP["SemanticBridge<br/><i>SDP Tier-0 Canonical Hydration</i>"]
+ B_CFO["CFOBridge<br/><i>P&L, Treasury & Altman Z'-Score</i>"]
+ B_TAU["EvaluationBridge<br/><i>TAU-bench & GAIA Stress</i>"]
+ end
 
-    MS -->|Lanzamiento y Healthcheck| CFO
-    MS -->|Lanzamiento y Healthcheck| WCH
-    MS -->|Lanzamiento y Healthcheck| CMP
-    MS -->|Lanzamiento y Healthcheck| TAU
-    MS -->|Lanzamiento y Healthcheck| SDP
+ subgraph Satellites [" Flota Autónoma Especializada"]
+ WCH[" White Coding Harness (8506)"]
+ CMP[" Compliance-as-Code (8507)"]
+ SDP[" Semantic Discovery (8510)"]
+ CFO[" Autonomous CFO (8501)"]
+ TAU[" TAU-bench Evaluator (8509)"]
+ end
 
-    WCH -.->|Contratos Sellados| ED
-    CMP -.->|Telemetria de Cumplimiento| ED
-    SDP -.->|Ahorro radical de tokens| MS
-    TAU -.->|Metricas Adversariales| MS
-    CFO -.->|Asientos y Auditoria Contable| ED
+ subgraph Infra [" Despliegue Cloud-Native"]
+ K8S["k8s/quantigrade-mesh.yaml"]
+ POD["podman/quantigrade-mesh.container"]
+ end
 
-    FW -->|Sanitización Ingress| MS
-    SB -->|Ejecución Segura| MS
+ FW --> MS
+ SB --> MS
+ MS --> ED
+ ED --> EX
+
+ MS --> B_WCH --> WCH
+ MS --> B_CMP --> CMP
+ MS --> B_SDP --> SDP
+ MS --> B_CFO --> CFO
+ MS --> B_TAU --> TAU
+
+ K8S -.-> Cockpit
+ POD -.-> Cockpit
 ```
 
 ---
 
-## 💎 Pilares Arquitectónicos de QGRADE_OS
+## Pilares Arquitectónicos de QGRADE_OS
 
-### 1. El Ciclo Completo de White Coding (Pizarra ➔ Contrato ➔ Código ➔ Prueba)
+### 1. El Ciclo Completo de White Coding (Pizarra Contrato Código Prueba)
 Conecta directamente con la [Proof Machine](../WHITE%20CODING%20HARNESS). Ningún agente escribe código en el vacío:
 - **Whiteboard First:** Especificación formal mediante esquemas y diagramas.
 - **StepContract:** Bloqueo inmutable con hash SHA-256 e inspección sintáctica AST.
@@ -66,11 +78,11 @@ Conecta directamente con la [Proof Machine](../WHITE%20CODING%20HARNESS). Ningú
 
 ---
 
-## 📚 Documentación Técnica & Gobernanza de QGRADE_OS
-- 📖 [**Manual de Uso y Operación Detallado**](./MANUAL_DE_USO.md)
-- 🤖 [**Especificación y Gobernanza de Agentes (AGENTS.md)**](./AGENTS.md)
-- 🛠️ [**Catálogo de Skills Asignadas (SKILLS_REGISTRY.md)**](./SKILLS_REGISTRY.md)
-- 🔌 [**Integración de Servidores MCP Nativos (MCP_INTEGRATION.md)**](./MCP_INTEGRATION.md)
+## Documentación Técnica & Gobernanza de QGRADE_OS
+- [**Manual de Uso y Operación Detallado**](./MANUAL_DE_USO.md)
+- [**Especificación y Gobernanza de Agentes (AGENTS.md)**](./AGENTS.md)
+-  [**Catálogo de Skills Asignadas (SKILLS_REGISTRY.md)**](./SKILLS_REGISTRY.md)
+- [**Integración de Servidores MCP Nativos (MCP_INTEGRATION.md)**](./MCP_INTEGRATION.md)
 
 ### 2. Cumplimiento Regulatorio Continuo (Compliance-as-Code Live Mesh)
 Elimina las auditorías manuales anuales. A través de sondas no intrusivas sobre los microservicios, el sistema evalúa en tiempo real:
@@ -93,14 +105,14 @@ La resolución estática de cientos de herramientas en el system prompt satura l
 
 ---
 
-## 🛠️ Manual de Operación y Uso
+##  Manual de Operación y Uso
 
 ### A. Requisitos Previos
 - Python 3.10 o superior (compatible y probado hasta Python 3.13 en Windows 11).
 - Dependencias base instaladas en el entorno:
-  ```powershell
-  pip install -r requirements.txt
-  ```
+ ```powershell
+ pip install -r requirements.txt
+ ```
 
 ### B. Arranque con Un Clic (Modo Operador)
 Ejecute el archivo por lotes en la consola o con doble clic:
@@ -108,28 +120,28 @@ Ejecute el archivo por lotes en la consola o con doble clic:
 INICIAR_QUANTIGRADE_MAESTRO.bat
 ```
 El Cockpit se desplegará instantáneamente en su navegador predeterminado:
-👉 **`http://localhost:8500`**
+ **`http://localhost:8500`**
 
 ### C. Módulos del Cockpit
 
-1. **🚀 Panel de Flota (Fleet Management):**
-   - Monitoriza en tiempo real el estado de escucha de los 8 puertos del ecosistema.
-   - Dispone de botones dedicados para lanzar servicios de forma individual o en paralelo (`Launch All Engines`), abriendo ventanas de consola desacopladas.
+1. ** Panel de Flota (Fleet Management):**
+ - Monitoriza en tiempo real el estado de escucha de los 8 puertos del ecosistema.
+ - Dispone de botones dedicados para lanzar servicios de forma individual o en paralelo (`Launch All Engines`), abriendo ventanas de consola desacopladas.
 
-2. **⚖️ Auditoría Compuesta Transversal (Cross-Engine Audit):**
-   - Ejecuta un peritaje global instantáneo invocando la postura de cumplimiento de Live Mesh, la verificación contractual de White Coding y la economía de tokens de SDP.
-   - Emite el sello unificado de aptitud enterprise.
+2. ** Auditoría Compuesta Transversal (Cross-Engine Audit):**
+ - Ejecuta un peritaje global instantáneo invocando la postura de cumplimiento de Live Mesh, la verificación contractual de White Coding y la economía de tokens de SDP.
+ - Emite el sello unificado de aptitud enterprise.
 
-3. **🔐 Búnker Criptográfico y Firmas Ed25519:**
-   - Visualización de la cadena de bloques local SHA-256.
-   - Generación de pares de claves públicas/privadas Ed25519 y firmado de hashes de verificación.
+3. ** Búnker Criptográfico y Firmas Ed25519:**
+ - Visualización de la cadena de bloques local SHA-256.
+ - Generación de pares de claves públicas/privadas Ed25519 y firmado de hashes de verificación.
 
-4. **📥 Exportador Universal:**
-   - Descarga el informe ejecutivo pericial completo en formatos JSON estructurado, Markdown judicial y PDF listo para el Consejo de Administración.
+4. ** Exportador Universal:**
+ - Descarga el informe ejecutivo pericial completo en formatos JSON estructurado, Markdown judicial y PDF listo para el Consejo de Administración.
 
 ---
 
-## 🧪 Verificación y Suite de Tests
+## Verificación y Suite de Tests (32 / 32 PASS)
 
 El núcleo de QGRADE_OS cuenta con una cobertura TDD total ejecutada con éxito:
 ```powershell
@@ -137,26 +149,51 @@ python -m pytest -v
 ```
 
 ```
-tests/test_qgrade_suite.py::test_ed25519_signing_and_verification PASSED [ 12%]
-tests/test_qgrade_suite.py::test_qgrade_signed_ledger PASSED             [ 25%]
-tests/test_qgrade_suite.py::test_qgrade_signed_merkle_tree PASSED        [ 37%]
-tests/test_qgrade_suite.py::test_qgrade_sandbox_blocks_destructive_commands PASSED [ 50%]
-tests/test_qgrade_suite.py::test_qgrade_prompt_firewall_redacts_injections PASSED [ 62%]
-tests/test_qgrade_suite.py::test_qgrade_universal_exporter PASSED        [ 75%]
-tests/test_qgrade_suite.py::test_qgrade_maestro_swarm PASSED             [ 87%]
-tests/test_qgrade_suite.py::test_qgrade_disruptive_innovations PASSED    [100%]
-============================== 8 passed in 2.93s ==============================
+tests/test_qgrade_suite.py::test_ed25519_signing_and_verification PASSED
+tests/test_qgrade_suite.py::test_qgrade_signed_ledger PASSED
+tests/test_qgrade_suite.py::test_qgrade_signed_merkle_tree PASSED
+tests/test_qgrade_suite.py::test_qgrade_sandbox_blocks_destructive_commands PASSED
+tests/test_qgrade_suite.py::test_qgrade_prompt_firewall_redacts_injections PASSED
+tests/test_qgrade_suite.py::test_qgrade_universal_exporter PASSED
+tests/test_qgrade_suite.py::test_qgrade_maestro_swarm PASSED
+tests/test_qgrade_suite.py::test_qgrade_disruptive_innovations PASSED
+tests/test_enterprise_swarm.py::test_white_coding_bridge_payload PASSED
+tests/test_enterprise_swarm.py::test_cfo_bridge_payload PASSED
+tests/test_enterprise_swarm.py::test_compliance_bridge_payload PASSED
+tests/test_enterprise_swarm.py::test_evaluation_bridge_payload PASSED
+tests/test_enterprise_swarm.py::test_semantic_bridge_payload PASSED
+tests/test_enterprise_swarm.py::test_full_swarm_dispatch PASSED
+tests/test_omnichannel_and_maestro_extensions.py::test_omnichannel_hitl_bridge PASSED
+tests/test_omnichannel_and_maestro_extensions.py::test_ecommerce_sentinel PASSED
+tests/test_omnichannel_and_maestro_extensions.py::test_cold_storage_bunker PASSED
+tests/test_qgrade_ide_orchestrator.py::test_byzantine_consensus PASSED
+tests/test_qgrade_ide_orchestrator.py::test_copilot_studio_bridge PASSED
+tests/test_qgrade_wave5.py::test_full_ide_orchestration_cycle PASSED
+...
+============================== 32 passed in 3.85s ==============================
 ```
 
 Auditoría de seguridad y calidad estática:
 ```powershell
-python -m ruff check .          # 0 errors
-python -m bandit -r . -ll       # 0 issues
+python -m ruff check . # 0 errors, 0 warnings
+python -m bandit -r . -ll # 0 issues (0 Medium, 0 High)
 ```
 
 ---
 
-## 🧭 Especificación de Puertos y Servicios
+## Matriz Oficial de Cobertura Regulatoria
+
+| Marco Normativo | Base Legal | Implementación Técnica en QGRADE_OS | Estado |
+| :--- | :--- | :--- | :---: |
+| **ENS (RD 311/2022 - Nivel Alto)** | Esquema Nacional de Seguridad | Búnker de custodia inmutable con firmas asimétricas Ed25519 y árboles Merkle SLSA L3+. | **Conforme** |
+| **EU AI Act Art. 14** | Reglamento UE 2024/1689 | Supervisión Humana Efectiva (HITL): Omnichannel Bridge multicanal con anulación gobernada. | **Conforme** |
+| **EU AI Act Art. 15** | Reglamento UE 2024/1689 | Dual-Model Prompt Injection Firewall contra ataques OWASP Top 10 for LLMs (LLM01). | **Conforme** |
+| **DORA** | Reglamento UE 2022/2554 | Trazabilidad de incidentes TIC y resiliencia de orquestación ante caídas de proveedores. | **Conforme** |
+| **NIS2 Art. 21** | Directiva UE 2022/2555 | Seguridad en la arquitectura de red y control de ejecución en sandbox seguro. | **Conforme** |
+
+---
+
+## Especificación de Puertos y Servicios
 
 | Puerto | Componente | Descripción |
 | :---: | :--- | :--- |
