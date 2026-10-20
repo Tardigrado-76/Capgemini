@@ -1,4 +1,4 @@
-# 🔌 MCP_INTEGRATION.md — AGENT EVALUATION FRAMEWORK
+# MCP_INTEGRATION.md — AGENT EVALUATION FRAMEWORK
 ## Integración de Servidores Model Context Protocol (Zero-Docker Native)
 
 > **Directiva Mandatoria:** Cero dependencias de contenedores Docker. Todos los servidores se ejecutan nativamente en el host mediante `npx` (Node.js) o `uvx` (Python).
@@ -20,27 +20,27 @@
 
 ```json
 {
-  "mcpServers": {
-    "puppeteer": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
-    },
-    "scrapling": {
-      "command": "uvx",
-      "args": ["scrapling-mcp"]
-    },
-    "slack": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-slack"],
-      "env": {
-        "SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}"
-      }
-    },
-    "postgres_benchmarks": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-postgres", "${POSTGRES_BENCHMARK_URI}"]
-    }
-  }
+ "mcpServers": {
+ "puppeteer": {
+ "command": "npx",
+ "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+ },
+ "scrapling": {
+ "command": "uvx",
+ "args": ["scrapling-mcp"]
+ },
+ "slack": {
+ "command": "npx",
+ "args": ["-y", "@modelcontextprotocol/server-slack"],
+ "env": {
+ "SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}"
+ }
+ },
+ "postgres_benchmarks": {
+ "command": "npx",
+ "args": ["-y", "@modelcontextprotocol/server-postgres", "${POSTGRES_BENCHMARK_URI}"]
+ }
+ }
 }
 ```
 
@@ -50,8 +50,8 @@
 
 ```mermaid
 graph LR
-    Harness["Benchmark Orchestrator"] -->|Navegación Web Real GAIA| PUPPETEER["puppeteer-mcp"]
-    Harness -->|Fuentes Web de Estrés| SCRAPLING["scrapling-mcp"]
-    Harness -->|Alertas a Ingeniería| SLACK["slack-mcp-server"]
-    Harness -->|Historial de Benchmarks EARS| PG["postgres-mcp-server"]
+ Harness["Benchmark Orchestrator"] -->|Navegación Web Real GAIA| PUPPETEER["puppeteer-mcp"]
+ Harness -->|Fuentes Web de Estrés| SCRAPLING["scrapling-mcp"]
+ Harness -->|Alertas a Ingeniería| SLACK["slack-mcp-server"]
+ Harness -->|Historial de Benchmarks EARS| PG["postgres-mcp-server"]
 ```

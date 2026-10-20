@@ -1,7 +1,7 @@
-# 🔬 AGENTS.md — AGENT EVALUATION FRAMEWORK (TAU-BENCH / GAIA)
+# AGENTS.md — AGENT EVALUATION FRAMEWORK (TAU-BENCH / GAIA)
 ## Especificación y Gobernanza del Enjambre de Certificación de Agentes IA
 
-> **Ámbito de Aplicación:** Banco de pruebas adversarial, benchmarking y certificación de agentes autónomos bajo EU AI Act Art. 15 (:8509).  
+> **Ámbito de Aplicación:** Banco de pruebas adversarial, benchmarking y certificación de agentes autónomos bajo EU AI Act Art. 15 (:8509). 
 > **Filosofía:** "No deploy without stress test: calibración rigurosa de precisión, robustez y resiliencia."
 
 ---
@@ -10,21 +10,21 @@
 
 ```mermaid
 graph TD
-    Candidate["Agente IA Candidato a Certificación"] --> TestRunner["Benchmark Orchestrator Agent"]
-    
-    subgraph TestingMatrix ["Batería de Pruebas Adversariales & Caos"]
-        TauGAIA["TAU / GAIA Scenario Runner Agent<br/><i>Tareas Multietapa Complejas</i>"]
-        Chaos["Chaos Monkey Injector Agent<br/><i>Latencias, Caídas de API & Corrupción de JSON</i>"]
-        Adversary["Red Team Adversarial Agent<br/><i>Prompt Injection & Jailbreaks</i>"]
-    end
+ Candidate["Agente IA Candidato a Certificación"] --> TestRunner["Benchmark Orchestrator Agent"]
+ 
+ subgraph TestingMatrix ["Batería de Pruebas Adversariales & Caos"]
+ TauGAIA["TAU / GAIA Scenario Runner Agent<br/><i>Tareas Multietapa Complejas</i>"]
+ Chaos["Chaos Monkey Injector Agent<br/><i>Latencias, Caídas de API & Corrupción de JSON</i>"]
+ Adversary["Red Team Adversarial Agent<br/><i>Prompt Injection & Jailbreaks</i>"]
+ end
 
-    TestRunner --> TestingMatrix
-    TestingMatrix --> Monitor["Telemetry & Behavior Sentinel Agent"]
-    Monitor --> Scorer["EARS Lead Scorer Agent<br/><i>Execution, Accuracy, Robustness, Safety</i>"]
-    
-    Scorer --> DecisionGate{"Decisión de Certificación"}
-    DecisionGate -->|EARS apto y cero vulnerabilidades| Pass["Certificado Oficial EU AI Act Art. 15"]
-    DecisionGate -->|EARS insuficiente o brechas detectadas| Quarantine["Pase a Cuarentena & Informe Forense"]
+ TestRunner --> TestingMatrix
+ TestingMatrix --> Monitor["Telemetry & Behavior Sentinel Agent"]
+ Monitor --> Scorer["EARS Lead Scorer Agent<br/><i>Execution, Accuracy, Robustness, Safety</i>"]
+ 
+ Scorer --> DecisionGate{"Decisión de Certificación"}
+ DecisionGate -->|EARS apto y cero vulnerabilidades| Pass["Certificado Oficial EU AI Act Art. 15"]
+ DecisionGate -->|EARS insuficiente o brechas detectadas| Quarantine["Pase a Cuarentena & Informe Forense"]
 ```
 
 ---
@@ -49,7 +49,7 @@ graph TD
 
 ### E. EARS Lead Scorer Agent
 - **Misión:** Calcular el índice ponderado EARS:
-  $$\text{EARS} = 0.25 \times E + 0.35 \times A + 0.20 \times R + 0.20 \times S$$
+ $$\text{EARS} = 0.25 \times E + 0.35 \times A + 0.20 \times R + 0.20 \times S$$
 - **Competencias:** Determinación del veredicto final y redacción del dictamen pericial con firma criptográfica.
 
 ---
