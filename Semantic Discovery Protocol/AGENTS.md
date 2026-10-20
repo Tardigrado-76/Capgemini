@@ -1,8 +1,8 @@
-# 🌐 AGENTS.md — SEMANTIC DISCOVERY PROTOCOL (SDP)
+# AGENTS.md — SEMANTIC DISCOVERY PROTOCOL (SDP)
 ## Especificación y Gobernanza del Enjambre de Descubrimiento e Hidratación Progresiva
 
-> **Ámbito de Aplicación:** Enrutamiento semántico inteligente, pasarela de herramientas y optimización de contexto de tokens (:8510).  
-> **Filosofía:** "Eliminar la sobrecarga cognitiva: inyectar solo las herramientas exactas en el momento preciso."
+> **Ámbito de Aplicación:** Enrutamiento semántico inteligente, pasarela de herramientas y optimización de contexto de tokens (:8510). 
+> **Filosofía:** \"Eliminar la sobrecarga cognitiva: inyectar solo las herramientas exactas en el momento preciso.\"
 
 ---
 
@@ -10,20 +10,9 @@
 
 ```mermaid
 graph TD
-    UserQuery["Petición en Lenguaje Natural del Usuario"] --> IntentRouter["Semantic Intent Router Agent"]
-    
-    subgraph DiscoveryEngine ["Motor de Descubrimiento & Hidratación"]
-        IndexMatcher["Vector & BM25 Tool Matcher Agent<br/><i>Búsqueda híbrida en catálogo de 500+ herramientas</i>"]
-        Hydrator["Progressive Schema Hydrator Agent<br/><i>Minimal (15t) -> Standard (200t) -> Full (1.5kt)</i>"]
-        PreFlight["Pre-Flight Safety Gate Agent<br/><i>Validación de Parámetros & Autenticación</i>"]
-    end
-
-    IntentRouter --> IndexMatcher
-    IndexMatcher -->|Top-K Tools Candidatas| Hydrator
-    Hydrator --> PreFlight
-    PreFlight --> ExecutionBridge["Zero-Docker MCP Bridge<br/><i>Ejecución Nativa Stdio/SSE</i>"]
-    ExecutionBridge --> Telemetry["SDP Telemetry & Cache Registry"]
-```
+ UserQuery[\"Petición en Lenguaje Natural del Usuario\"] --> IntentRouter[\"Semantic Intent Router Agent\"]
+ 
+ subgraph DiscoveryEngine [\"Motor de Descubrimiento & Hidratación\"]\n IndexMatcher[\"Vector & BM25 Tool Matcher Agent<br/><i>Búsqueda híbrida en catálogo de 500+ herramientas</i>\"]\n Hydrator[\"Progressive Schema Hydrator Agent<br/><i>Minimal (15t) -> Standard (200t) -> Full (1.5kt)</i>\"]\n PreFlight[\"Pre-Flight Safety Gate Agent<br/><i>Validación de Parámetros & Autenticación</i>\"]\n end\n\n IntentRouter --> IndexMatcher\n IndexMatcher -->|Top-K Tools Candidatas| Hydrator\n Hydrator --> PreFlight\n PreFlight --> ExecutionBridge[\"Zero-Docker MCP Bridge<br/><i>Ejecución Nativa Stdio/SSE</i>\"]\n ExecutionBridge --> Telemetry[\"SDP Telemetry & Cache Registry\"]\n```
 
 ---
 
@@ -40,10 +29,10 @@ graph TD
 ### C. Progressive Schema Hydrator Agent
 - **Misión:** Cargar esquemas de herramientas de forma diferida (*lazy loading*).
 - **Competencias:**
-  - **Fase 1 (Descubrimiento):** Solo expone `name` y `short_description` (~15 tokens).
-  - **Fase 2 (Selección):** Carga `parameters.required` y tipos primarios (~200 tokens).
-  - **Fase 3 (Ejecución):** Inyecta la especificación JSON-Schema completa únicamente si la herramienta es invocada.
-  - **Ahorro de Contexto:** Reduce el consumo de tokens en un **91.4%** frente a la inyección estática habitual.
+ - **Fase 1 (Descubrimiento):** Solo expone `name` y `short_description` (~15 tokens).
+ - **Fase 2 (Selección):** Carga `parameters.required` y tipos primarios (~200 tokens).
+ - **Fase 3 (Ejecución):** Inyecta la especificación JSON-Schema completa únicamente si la herramienta es invocada.
+ - **Ahorro de Contexto:** Reduce el consumo de tokens en un **91.4%** frente a la inyección estática habitual.
 
 ### D. Pre-Flight Safety Gate Agent
 - **Misión:** Validar que los argumentos provistos por el LLM cumplan con el esquema formal antes de ejecutar la llamada física.
