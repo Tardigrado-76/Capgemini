@@ -1,4 +1,4 @@
-# 🔌 MCP_INTEGRATION.md — SHARED QUANTIGRADE
+# MCP_INTEGRATION.md — SHARED QUANTIGRADE
 ## Integración de Servidores Model Context Protocol (Zero-Docker Native)
 
 > **Directiva Mandatoria:** Cero dependencias de contenedores Docker. Todos los servicios se ejecutan nativamente en el host.
@@ -20,16 +20,16 @@ La librería `shared_quantigrade` interactúa con los siguientes servidores nati
 
 ```json
 {
-  "mcpServers": {
-    "github": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github"],
-      "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}" }
-    },
-    "puppeteer": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
-    }
-  }
+ "mcpServers": {
+ "github": {
+ "command": "npx",
+ "args": ["-y", "@modelcontextprotocol/server-github"],
+ "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}" }
+ },
+ "puppeteer": {
+ "command": "npx",
+ "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+ }
+ }
 }
 ```

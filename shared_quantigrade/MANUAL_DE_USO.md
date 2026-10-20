@@ -1,4 +1,4 @@
-# 📖 MANUAL DE USO Y OPERACIÓN — SHARED QUANTIGRADE
+# MANUAL DE USO Y OPERACIÓN — SHARED QUANTIGRADE
 ### *Guía de Integración del Núcleo de Marca, Tokens de Diseño y PDF Branding*
 
 ---
@@ -9,12 +9,12 @@
 
 ```mermaid
 graph TD
-    Shared["shared_quantigrade"] --> B["branding.py<br/><i>Inyección de Tema CSS Cybernetic Executive</i>"]
-    Shared --> P["pdf_branding.py<br/><i>Membretes, Watermarks & Sellos Periciales ReportLab</i>"]
-    Shared --> A["assets/Quantigrade.jpg<br/><i>Logotipo Oficial Corporativo</i>"]
-    
-    B --> StreamlitApps["Interfaces Web Streamlit (:8500 a :8510)"]
-    P --> Dossiers["Pasaportes & Dossiers Oficiales PDF"]
+ Shared["shared_quantigrade"] --> B["branding.py<br/><i>Inyección de Tema CSS Cybernetic Executive</i>"]
+ Shared --> P["pdf_branding.py<br/><i>Membretes, Watermarks & Sellos Periciales ReportLab</i>"]
+ Shared --> A["assets/Quantigrade.jpg<br/><i>Logotipo Oficial Corporativo</i>"]
+ 
+ B --> StreamlitApps["Interfaces Web Streamlit (:8500 a :8510)"]
+ P --> Dossiers["Pasaportes & Dossiers Oficiales PDF"]
 ```
 
 ---
@@ -28,8 +28,8 @@ from shared_quantigrade.branding import apply_quantigrade_theme
 
 # Inyecta paleta oficial (#00D2FF, #0A1128, Glassmorphism) y cabecera
 apply_quantigrade_theme(
-    service_name="Mi Servicio Autónomo",
-    service_port=8500
+ service_name="Mi Servicio Autónomo",
+ service_port=8500
 )
 ```
 

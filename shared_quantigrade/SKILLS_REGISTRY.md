@@ -1,8 +1,8 @@
-# 🛠️ SKILLS_REGISTRY.md — SHARED QUANTIGRADE
+# SKILLS_REGISTRY.md — SHARED QUANTIGRADE
 ## Catálogo de Skills de Diseño, Tokens y Experiencia de Usuario
 
-> **Sistema:** `shared_quantigrade` (Librería Base de UI/UX y Branding)  
-> **Ámbito:** Tokens de diseño, maquetación, paletas HSL y consistencia de marca  
+> **Sistema:** `shared_quantigrade` (Librería Base de UI/UX y Branding) 
+> **Ámbito:** Tokens de diseño, maquetación, paletas HSL y consistencia de marca 
 
 ---
 
