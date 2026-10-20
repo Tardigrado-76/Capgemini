@@ -1,9 +1,9 @@
-# 💰 AUTONOMOUS CFO — Director Financiero para PYMEs
+# AUTONOMOUS CFO — Director Financiero para PYMEs
 ### *El caso de estudio que destruye el "PoC Purgatory": Multi-agente financiero, cumplimiento NIS2/EU AI Act y despliegue real en producción.*
 
 ---
 
-## 🧭 ¿Qué es el "PoC Purgatory" y cómo lo superamos?
+## ¿Qué es el "PoC Purgatory" y cómo lo superamos?
 
 > *"En las grandes consultoras y corporaciones, el 85% de las iniciativas de IA mueren en el 'PoC Purgatory': demos vistosas en Jupyter Notebooks que colapsan en cuanto tocan datos sucios, carecen de auditoría legal y requieren un batallón de ingenieros solo para mantenerlas vivas.*
 >
@@ -13,80 +13,80 @@
 
 ---
 
-## 🏛️ Arquitectura del Sistema
+## Arquitectura del Sistema
 
 ```mermaid
 graph TD
-    subgraph UI ["🖥️ Consola Ejecutiva Streamlit (Port 8501)"]
-        DASH["Dashboard Financiero & Altman Z'-Score"]
-        HITL_UI["Centro de Aprobaciones 4-Ojos (Art. 14 EU AI Act)"]
-        REP["Generador de Dossiers PDF (ReportLab)"]
-    end
+ subgraph UI ["Consola Ejecutiva Streamlit (Port 8501)"]
+ DASH["Dashboard Financiero & Altman Z'-Score"]
+ HITL_UI["Centro de Aprobaciones 4-Ojos (Art. 14 EU AI Act)"]
+ REP["Generador de Dossiers PDF (ReportLab)"]
+ end
 
-    subgraph Core ["🧠 Motor Orquestador AutonomoCFOEngine"]
-        OCR["InvoiceOCRTool<br/><i>Lectura y Validación de Facturas</i>"]
-        FRAUD["FraudDetectorTool<br/><i>Detección de IBANs y Desvíos</i>"]
-        CASH["CashFlowForecasterTool<br/><i>Pasarela de Caja & Burn Rate</i>"]
-        TAX["TaxLedgerTool<br/><i>Modelos 303/111 AEAT</i>"]
-    end
+ subgraph Core ["Motor Orquestador AutonomoCFOEngine"]
+ OCR["InvoiceOCRTool<br/><i>Lectura y Validación de Facturas</i>"]
+ FRAUD["FraudDetectorTool<br/><i>Detección de IBANs y Desvíos</i>"]
+ CASH["CashFlowForecasterTool<br/><i>Pasarela de Caja & Burn Rate</i>"]
+ TAX["TaxLedgerTool<br/><i>Modelos 303/111 AEAT</i>"]
+ end
 
-    subgraph SDP ["🔌 Conectores SDP Dinámicos (Tier-0)"]
-        A3["A3 Innuva ERP"]
-        HOLDED["Holded Cloud"]
-        SAGE["Sage 50 Cloud"]
-        PSD2["Open Banking Gateway (Santander/BBVA)"]
-        STRIPE["Stripe Billing"]
-    end
+ subgraph SDP ["Conectores SDP Dinámicos (Tier-0)"]
+ A3["A3 Innuva ERP"]
+ HOLDED["Holded Cloud"]
+ SAGE["Sage 50 Cloud"]
+ PSD2["Open Banking Gateway (Santander/BBVA)"]
+ STRIPE["Stripe Billing"]
+ end
 
-    subgraph Governance ["🔒 Búnker Criptográfico & Cumplimiento"]
-        LEDGER["Ledger SHA-256 Inmutable<br/><i>Directiva NIS2 (Art. 21/23)</i>"]
-        VAULT["Bóveda Criptográfica RGPD<br/><i>Anonimización & Shredding</i>"]
-        SBOM["SBOM CycloneDX v1.5<br/><i>Cyber Resilience Act (CRA)</i>"]
-    end
+ subgraph Governance ["Búnker Criptográfico & Cumplimiento"]
+ LEDGER["Ledger SHA-256 Inmutable<br/><i>Directiva NIS2 (Art. 21/23)</i>"]
+ VAULT["Bóveda Criptográfica RGPD<br/><i>Anonimización & Shredding</i>"]
+ SBOM["SBOM CycloneDX v1.5<br/><i>Cyber Resilience Act (CRA)</i>"]
+ end
 
-    DASH --> Core
-    Core --> SDP
-    Core --> Governance
-    Core --> HITL_UI
-    HITL_UI -->|Firma Digital Interventor| LEDGER
-    Governance --> REP
+ DASH --> Core
+ Core --> SDP
+ Core --> Governance
+ Core --> HITL_UI
+ HITL_UI -->|Firma Digital Interventor| LEDGER
+ Governance --> REP
 ```
 
 ---
 
-## 💎 Características Principales
+## Características Principales
 
 1. **Gestión Financiera Integral:**
-   - **Previsión de Tesorería:** Cálculo de runway, burn rate y flujo de caja proyectado a 30, 60 y 90 días.
-   - **Índice de Solvencia:** Implementación exacta del modelo **Altman Z'-Score** para empresas no cotizadas, detectando riesgo de quiebra antes de que ocurra.
-   - **Control Tributario:** Estimación en tiempo real de liquidaciones de IVA e IRPF (Modelos 303 y 111 de la AEAT).
-   - **Detección de Fraude en Facturas:** Alertas tempranas ante suplantación de identidad en proveedores o cambios no autorizados en cuentas bancarias.
+ - **Previsión de Tesorería:** Cálculo de runway, burn rate y flujo de caja proyectado a 30, 60 y 90 días.
+ - **Índice de Solvencia:** Implementación exacta del modelo **Altman Z'-Score** para empresas no cotizadas, detectando riesgo de quiebra antes de que ocurra.
+ - **Control Tributario:** Estimación en tiempo real de liquidaciones de IVA e IRPF (Modelos 303 y 111 de la AEAT).
+ - **Detección de Fraude en Facturas:** Alertas tempranas ante suplantación de identidad en proveedores o cambios no autorizados en cuentas bancarias.
 
 2. **Gobernanza Criptográfica Integrada (Compliance-by-Design):**
-   - **Directiva NIS2 (Art. 21 y 23):** Cada factura procesada, conciliación bancaria y orden de pago queda sellada en una cadena inmutable de bloques SHA-256 (`audit_nis2_ledger.jsonl`).
-   - **Supervisión Humana Obligatoria (HITL Gate):** Conforme al **Artículo 14 del EU AI Act**, cualquier pago que supere el umbral configurado requiere autorización explícita de un interventor humano.
-   - **Privacidad RGPD (Art. 17):** Anonimización de datos sensibles y capacidad de borrado criptográfico no recuperable (*cryptographic shredding*).
-   - **SBOM CycloneDX v1.5 (CRA):** Trazabilidad de dependencias y firewall contra prompt injections en documentos adjuntos.
+ - **Directiva NIS2 (Art. 21 y 23):** Cada factura procesada, conciliación bancaria y orden de pago queda sellada en una cadena inmutable de bloques SHA-256 (`audit_nis2_ledger.jsonl`).
+ - **Supervisión Humana Obligatoria (HITL Gate):** Conforme al **Artículo 14 del EU AI Act**, cualquier pago que supere el umbral configurado requiere autorización explícita de un interventor humano.
+ - **Privacidad RGPD (Art. 17):** Anonimización de datos sensibles y capacidad de borrado criptográfico no recuperable (*cryptographic shredding*).
+ - **SBOM CycloneDX v1.5 (CRA):** Trazabilidad de dependencias y firewall contra prompt injections en documentos adjuntos.
 
 3. **Conectores ERP & Bancarios mediante Semantic Discovery Protocol:**
-   - Carga dinámica y bajo demanda de conectores a A3 Innuva, Holded, Sage 50, ContaSOL, Stripe Billing y APIs PSD2 Open Banking, ahorrando hasta un 94% de contexto en llamadas de inferencia.
+ - Carga dinámica y bajo demanda de conectores a A3 Innuva, Holded, Sage 50, ContaSOL, Stripe Billing y APIs PSD2 Open Banking, ahorrando hasta un 94% de contexto en llamadas de inferencia.
 
-## 📚 Documentación Técnica & Gobernanza
-- 📖 [**Manual de Uso y Operación Detallado**](./MANUAL_DE_USO.md)
-- 🤖 [**Especificación y Gobernanza de Agentes (AGENTS.md)**](./AGENTS.md)
-- 🛠️ [**Catálogo de Skills Asignadas (SKILLS_REGISTRY.md)**](./SKILLS_REGISTRY.md)
-- 🔌 [**Integración de Servidores MCP Nativos (MCP_INTEGRATION.md)**](./MCP_INTEGRATION.md)
+## Documentación Técnica & Gobernanza
+- [**Manual de Uso y Operación Detallado**](./MANUAL_DE_USO.md)
+- [**Especificación y Gobernanza de Agentes (AGENTS.md)**](./AGENTS.md)
+- [**Catálogo de Skills Asignadas (SKILLS_REGISTRY.md)**](./SKILLS_REGISTRY.md)
+- [**Integración de Servidores MCP Nativos (MCP_INTEGRATION.md)**](./MCP_INTEGRATION.md)
 
 ---
 
-## 🛠️ Guía de Inicio Rápido y Uso
+## Guía de Inicio Rápido y Uso
 
 ### 1. Requisitos
 - Python 3.10+ (probado exhaustivamente en Python 3.13 en Windows 11).
 - Instalar dependencias:
-  ```powershell
-  pip install -r requirements.txt
-  ```
+ ```powershell
+ pip install -r requirements.txt
+ ```
 
 ### 2. Ejecución con Doble Clic
 Ejecute el archivo batch en la raíz del módulo:
@@ -94,7 +94,7 @@ Ejecute el archivo batch en la raíz del módulo:
 INICIAR_CFO_AUTONOMO.bat
 ```
 El servidor Streamlit se iniciará en su puerto dedicado:
-👉 **`http://localhost:8501`**
+ **`http://localhost:8501`**
 
 ### 3. Operativa en la Interfaz
 - **Pestaña 1 - Panel de Control:** Visualice el estado de tesorería, ratios de liquidez y gráfico de Altman Z'-Score.
@@ -105,9 +105,9 @@ El servidor Streamlit se iniciará en su puerto dedicado:
 
 ---
 
-## 🧪 Verificación de Pruebas Unitarias
+## Verificación de Pruebas Unitarias (26 / 26 PASS)
 
-La suite completa consta de 17 pruebas unitarias sin fallos:
+La suite completa consta de 26 pruebas unitarias sin fallos:
 ```powershell
 python -m pytest -v
 ```
@@ -126,12 +126,30 @@ tests/test_sdp_accounting_connector.py::test_sdp_accounting_registry PASSED
 tests/test_sdp_accounting_connector.py::test_sdp_a3_innuva_routing PASSED
 tests/test_sdp_accounting_connector.py::test_sdp_psd2_banking_routing PASSED
 tests/test_sdp_accounting_connector.py::test_sdp_accounting_token_efficiency PASSED
-============================== 17 passed in 9.15s ==============================
+tests/test_cfo_ocr_and_ppt.py::test_paddleocr_invoice_parser PASSED
+tests/test_cfo_ocr_and_ppt.py::test_cfo_ppt_deck_generation PASSED
+tests/test_cfo_wave3.py::test_monthly_closing_agent PASSED
+tests/test_cfo_wave3.py::test_multichannel_reconciliation PASSED
+tests/test_cfo_wave3.py::test_m365_excel_ghost_scripts PASSED
+...
+============================== 26 passed in 7.42s ==============================
 ```
 
+---
+
+## Matriz Oficial de Cobertura Regulatoria
+
+| Marco Normativo | Base Legal | Implementación Técnica en Autonomous CFO | Estado |
+| :--- | :--- | :--- | :---: |
+| **NIS2** | Directiva UE 2022/2555 | Art. 21 y 23: Trazabilidad inmutable de órdenes financieras en blockchain SHA-256 (`audit_nis2_ledger.jsonl`). | **Conforme** |
+| **EU AI Act Art. 14** | Reglamento UE 2024/1689 | Supervisión humana obligatoria (HITL Gate): autorización explícita de interventor para transferencias > 50.000 EUR. | **Conforme** |
+| **RGPD** | Reglamento UE 2016/679 | Art. 17: Anonimización de datos sensibles y borrado criptográfico no recuperable (*cryptographic shredding*). | **Conforme** |
+| **DORA** | Reglamento UE 2022/2554 | Resiliencia de transacciones financieras, conciliación bancaria PSD2 y trazabilidad de pasarelas de pago. | **Conforme** |
+| **CRA** | Cyber Resilience Act | SBOM CycloneDX v1.5, validación de integridad de dependencias y escaneo contra prompt injection en adjuntos. | **Conforme** |
+
 ```powershell
-python -m ruff check .          # 0 errors
-python -m bandit -r . -ll       # 0 issues
+python -m ruff check . # 0 errors
+python -m bandit -r . -ll # 0 issues
 ```
 
 ---

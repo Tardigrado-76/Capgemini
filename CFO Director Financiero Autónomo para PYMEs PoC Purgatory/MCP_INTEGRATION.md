@@ -1,4 +1,4 @@
-# 🔌 MCP_INTEGRATION.md — CFO AUTÓNOMO PARA PYMES
+# MCP_INTEGRATION.md — CFO AUTÓNOMO PARA PYMES
 ## Integración de Servidores Model Context Protocol (Zero-Docker Native)
 
 > **Directiva Mandatoria:** Cero dependencias de contenedores Docker. Todos los servidores se ejecutan nativamente en el host mediante `npx` (Node.js) o `uvx` (Python).
@@ -20,36 +20,36 @@
 
 ```json
 {
-  "mcpServers": {
-    "stripe": {
-      "command": "npx",
-      "args": ["-y", "@stripe/mcp"],
-      "env": {
-        "STRIPE_API_KEY": "${STRIPE_SECRET_KEY}"
-      }
-    },
-    "odoo": {
-      "command": "uvx",
-      "args": ["odoo-mcp-server"],
-      "env": {
-        "ODOO_URL": "${ODOO_URL}",
-        "ODOO_DB": "${ODOO_DB}",
-        "ODOO_API_KEY": "${ODOO_API_KEY}"
-      }
-    },
-    "postgres_finance": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-postgres", "${POSTGRES_FINANCE_URI}"]
-    },
-    "mailgun": {
-      "command": "npx",
-      "args": ["-y", "mailgun-mcp-server"],
-      "env": {
-        "MAILGUN_API_KEY": "${MAILGUN_KEY}",
-        "MAILGUN_DOMAIN": "${MAILGUN_DOMAIN}"
-      }
-    }
-  }
+ "mcpServers": {
+ "stripe": {
+ "command": "npx",
+ "args": ["-y", "@stripe/mcp"],
+ "env": {
+ "STRIPE_API_KEY": "${STRIPE_SECRET_KEY}"
+ }
+ },
+ "odoo": {
+ "command": "uvx",
+ "args": ["odoo-mcp-server"],
+ "env": {
+ "ODOO_URL": "${ODOO_URL}",
+ "ODOO_DB": "${ODOO_DB}",
+ "ODOO_API_KEY": "${ODOO_API_KEY}"
+ }
+ },
+ "postgres_finance": {
+ "command": "npx",
+ "args": ["-y", "@modelcontextprotocol/server-postgres", "${POSTGRES_FINANCE_URI}"]
+ },
+ "mailgun": {
+ "command": "npx",
+ "args": ["-y", "mailgun-mcp-server"],
+ "env": {
+ "MAILGUN_API_KEY": "${MAILGUN_KEY}",
+ "MAILGUN_DOMAIN": "${MAILGUN_DOMAIN}"
+ }
+ }
+ }
 }
 ```
 
@@ -59,8 +59,8 @@
 
 ```mermaid
 graph TD
-    CFO["Autonomous CFO Orchestrator"] -->|Cobros y Pasarela| STRIPE["stripe-mcp"]
-    CFO -->|Asientos Contables y ERP| ODOO["odoo-mcp-server"]
-    CFO -->|Libro Mayor y Proveedores| PG["postgres-mcp-server"]
-    CFO -->|Alertas HITL a Dirección| MG["mailgun-mcp-server"]
+ CFO["Autonomous CFO Orchestrator"] -->|Cobros y Pasarela| STRIPE["stripe-mcp"]
+ CFO -->|Asientos Contables y ERP| ODOO["odoo-mcp-server"]
+ CFO -->|Libro Mayor y Proveedores| PG["postgres-mcp-server"]
+ CFO -->|Alertas HITL a Dirección| MG["mailgun-mcp-server"]
 ```
