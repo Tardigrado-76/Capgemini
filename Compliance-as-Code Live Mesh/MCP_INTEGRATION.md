@@ -1,4 +1,4 @@
-# 🔌 MCP_INTEGRATION.md — COMPLIANCE-AS-CODE LIVE MESH
+# MCP_INTEGRATION.md — COMPLIANCE-AS-CODE LIVE MESH
 ## Integración de Servidores Model Context Protocol (Zero-Docker Native)
 
 > **Directiva Mandatoria:** Cero dependencias de contenedores Docker. Todos los servidores se ejecutan nativamente en el host mediante `npx` (Node.js) o `uvx` (Python).
@@ -20,23 +20,23 @@
 
 ```json
 {
-  "mcpServers": {
-    "postgres": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-postgres", "${POSTGRES_COMPLIANCE_URI}"]
-    },
-    "github": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github"],
-      "env": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
-      }
-    },
-    "scrapling": {
-      "command": "uvx",
-      "args": ["scrapling-mcp"]
-    }
-  }
+ "mcpServers": {
+ "postgres": {
+ "command": "npx",
+ "args": ["-y", "@modelcontextprotocol/server-postgres", "${POSTGRES_COMPLIANCE_URI}"]
+ },
+ "github": {
+ "command": "npx",
+ "args": ["-y", "@modelcontextprotocol/server-github"],
+ "env": {
+ "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+ }
+ },
+ "scrapling": {
+ "command": "uvx",
+ "args": ["scrapling-mcp"]
+ }
+ }
 }
 ```
 
@@ -46,8 +46,8 @@
 
 ```mermaid
 graph LR
-    Council["Consejo de Jueces IA"] -->|Inspección Repo y SBOM| GH["github-mcp-server"]
-    Council -->|Evidencias Inmutables| PG["postgres-mcp-server"]
-    Council -->|Alertas CSIRT y EUR-Lex| SC["scrapling-mcp"]
-    Council -->|Auditoría Cloud DORA| AWS["aws-mcp"]
+ Council["Consejo de Jueces IA"] -->|Inspección Repo y SBOM| GH["github-mcp-server"]
+ Council -->|Evidencias Inmutables| PG["postgres-mcp-server"]
+ Council -->|Alertas CSIRT y EUR-Lex| SC["scrapling-mcp"]
+ Council -->|Auditoría Cloud DORA| AWS["aws-mcp"]
 ```
