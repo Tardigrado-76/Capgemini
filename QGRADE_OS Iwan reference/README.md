@@ -1,19 +1,19 @@
 # QUANTIGRADE OS — The Maestro Cockpit
-### *La síntesis viva del AI Workbench Enterprise: cuando la arquitectura de Iwan van der Kleijn se convierte en software de producción.*
+### *Consola de Supervisión Unificada y Enrutamiento JIT para el Ecosistema de Agentes Enterprise*
 
 ---
 
-## El Manifiesto: Lo que quedó pendiente, hoy está en ejecución
+## Propósito Arquitectónico: El Arnés Operativo Unificado
 
-> *"Iwan: Durante años explicaste en Capgemini, en tus conferencias y en tus artículos del blog el drama del **PoC Purgatory** empresarial; acuñaste **White Coding** como la única cura frente al caos descontrolado del 'vibe coding'; diseñaste el patrón conceptual del **semantic-discovery-loop** para frenar el envenenamiento de contexto en LLMs; y advertiste que DORA, NIS2 y el EU AI Act exigirían un compliance que fuese código vivo, no carpetas de PDFs firmados post-mortem.*
+> *"Llevar los sistemas basados en agentes al entorno corporativo exige pasar de la experimentación aislada a la gobernanza centralizada. 
+> 
+> QGRADE_OS actúa como el hipervisor y panel de control operativo (*The Maestro Cockpit*) que integra los principios de **White Coding**, evaluación continua de cumplimiento (**DORA, NIS2, ENS, EU AI Act**), descubrimiento semántico de herramientas y mitigación de riesgos en tiempo de ejecución.
 >
-> *Muchos lo leyeron como teoría o filosofía futurista. Nosotros lo leímos como un plano de ingeniería.*
->
-> *Alguien tenía que remangarse, ensamblar las piezas que faltaban, atar los cabos sueltos, someter cada línea al rigor de TDD estricto, blindarlo con criptografía asimétrica Ed25519 y árboles Merkle SLSA L3+, y montar el centro de mando que gobierna todo el ecosistema. Aquí está. No es una demo. No es un wireframe. Es la máquina completa, corriendo y verificada al 100%."*
+> Su misión no es añadir complejidad, sino orquestar de forma no invasiva los subsistemas especializados: aislar la ejecución en entornos de prueba, garantizar la trazabilidad criptográfica de las decisiones (firmas Ed25519 y Merkle Ledger) y proporcionar a los equipos de ingeniería un punto de observación único, determinista y verificado al 100% mediante pruebas automatizadas."*
 
 ---
 
-##  ¿Por qué QGRADE_OS es la Suma de Todo?
+## ¿Por qué QGRADE_OS es la Suma de Todo?
 
 QGRADE_OS no es una herramienta más: **es el hipervisor orquestador (The Maestro Cockpit)** que unifica, supervisa y audita transversalmente los motores autónomos de la suite Quantigrade. 
 
@@ -21,7 +21,7 @@ Cada subsistema resuelve uno de los problemas críticos planteados por Iwan en l
 
 ```mermaid
 graph TD
- subgraph Cockpit [" QGRADE_OS — The Maestro Cockpit (Port 8500)"]
+ subgraph Cockpit ["QGRADE_OS — The Maestro Cockpit (Port 8500)"]
  MS["Maestro Swarm JIT Router<br/><i>orchestrator/maestro_swarm.py</i>"]
  FW["Dual-Model Prompt Firewall<br/><i>OWASP LLM01 Jailbreak Shield</i>"]
  SB["MicroVM Sandbox Guard<br/><i>Restricted Execution Engine</i>"]
@@ -29,7 +29,7 @@ graph TD
  EX["Universal Exporter<br/><i>JSON / Markdown / PDF ReportLab</i>"]
  end
 
- subgraph Bridges [" Puentes JIT Especializados (Zero-Overhead)"]
+ subgraph Bridges ["Puentes JIT Especializados (Zero-Overhead)"]
  B_WCH["WhiteCodingBridge<br/><i>StepContracts & Jira/Confluence</i>"]
  B_CMP["ComplianceBridge<br/><i>DORA / NIS2 / ENS Telemetry</i>"]
  B_SDP["SemanticBridge<br/><i>SDP Tier-0 Canonical Hydration</i>"]
@@ -37,15 +37,15 @@ graph TD
  B_TAU["EvaluationBridge<br/><i>TAU-bench & GAIA Stress</i>"]
  end
 
- subgraph Satellites [" Flota Autónoma Especializada"]
- WCH[" White Coding Harness (8506)"]
- CMP[" Compliance-as-Code (8507)"]
- SDP[" Semantic Discovery (8510)"]
- CFO[" Autonomous CFO (8501)"]
- TAU[" TAU-bench Evaluator (8509)"]
+ subgraph Satellites ["Flota Autónoma Especializada"]
+ WCH["White Coding Harness (8506)"]
+ CMP["Compliance-as-Code (8507)"]
+ SDP["Semantic Discovery (8510)"]
+ CFO["Autonomous CFO (8501)"]
+ TAU["TAU-bench Evaluator (8509)"]
  end
 
- subgraph Infra [" Despliegue Cloud-Native"]
+ subgraph Infra ["Despliegue Cloud-Native"]
  K8S["k8s/quantigrade-mesh.yaml"]
  POD["podman/quantigrade-mesh.container"]
  end
@@ -81,7 +81,7 @@ Conecta directamente con la [Proof Machine](../WHITE%20CODING%20HARNESS). Ningú
 ## Documentación Técnica & Gobernanza de QGRADE_OS
 - [**Manual de Uso y Operación Detallado**](./MANUAL_DE_USO.md)
 - [**Especificación y Gobernanza de Agentes (AGENTS.md)**](./AGENTS.md)
--  [**Catálogo de Skills Asignadas (SKILLS_REGISTRY.md)**](./SKILLS_REGISTRY.md)
+- [**Catálogo de Skills Asignadas (SKILLS_REGISTRY.md)**](./SKILLS_REGISTRY.md)
 - [**Integración de Servidores MCP Nativos (MCP_INTEGRATION.md)**](./MCP_INTEGRATION.md)
 
 ### 2. Cumplimiento Regulatorio Continuo (Compliance-as-Code Live Mesh)
@@ -105,7 +105,7 @@ La resolución estática de cientos de herramientas en el system prompt satura l
 
 ---
 
-##  Manual de Operación y Uso
+## Manual de Operación y Uso
 
 ### A. Requisitos Previos
 - Python 3.10 o superior (compatible y probado hasta Python 3.13 en Windows 11).

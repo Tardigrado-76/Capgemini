@@ -1,19 +1,19 @@
 # QUANTIGRADE - Semantic Discovery Protocol (SDP)
 
-> **El Modelo Canónico Universal para Conectores de IA de Mercado (2026/2027)**
-> *Superando a Anthropic MCP mediante Divulgación Progresiva en 4 Capas, Federación Polimórfica y Sellado Criptográfico.*
-> **Quantigrade - Detalle Iwan (Quantum-Resilient Systems)**
+> **Optimización Jerárquica y Descubrimiento Semántico para Servidores de Herramientas de IA**
+> *Extensión arquitectónica para catálogos masivos de herramientas mediante Divulgación Progresiva (Tiers 0→3), Enrutamiento Dinámico y Trazabilidad Criptográfica.*
 
 ---
 
-## Por qué MCP Tradicional se Queda Obsoleto Frente a SDP
+## El Desafío Operativo: Mitigando el *Tool-Stuffing* en Catálogos Extensos
 
-El protocolo MCP de Anthropic resuelve la estandarización del transporte, pero sufre del problema crítico de **Tool-Stuffing**:
-1. **Saturación del Context Window:** Si un agente tiene acceso a 100 herramientas corporativas o 2,700 nodos de n8n, MCP inyecta todos los esquemas JSON completos en cada turno de llamada (~75,000 tokens).
-2. **Degradación del Razonamiento ("Lost in the Middle"):** Los modelos pierden precisión cuando el contexto está saturado de definiciones de herramientas irrelevantes.
-3. **Ausencia de Sandbox y Gobernanza:** MCP tradicional carece de validación formal pre-flight previa al despacho y de trazabilidad criptográfica inmutable.
+El Model Context Protocol (MCP) ha establecido un estándar abierto de gran valor para la interoperabilidad entre modelos y herramientas. Sin embargo, al escalar a entornos corporativos con cientos de endpoints o catálogos extensos (como los más de 2,700 nodos de automatización empresarial), surge el cuello de botella del **Tool-Stuffing**:
 
-### La Solución Quantigrade: Ciclo Progresivo en 4 Capas (Tiers 0→3)
+1. **Consumo Excesivo de Contexto:** Inyectar esquemas JSON completos de decenas de herramientas en cada turno puede consumir decenas de miles de tokens antes de procesar la petición del usuario.
+2. **Dispersión Atencional ("Lost in the Middle"):** La presencia de esquemas redundantes degrada la precisión en la selección de herramientas y aumenta la probabilidad de alucinaciones en parámetros.
+3. **Necesidad de Gobernanza Previa:** En entornos críticos se requiere una fase de validación de invariantes y contratos antes de la ejecución física de la acción.
+
+### La Propuesta de SDP: Divulgación Progresiva en 4 Capas (Tiers 0→3)
 
 ```mermaid
 sequenceDiagram

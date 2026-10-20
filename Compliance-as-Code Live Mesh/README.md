@@ -1,7 +1,7 @@
-# IWAN - Compliance-as-Code Live Mesh (Enterprise Edition)
+# Compliance-as-Code Live Mesh (Enterprise Edition)
 
-> **Plataforma de Auditoría Regulatoria Continua para Proyectos Enterprise en Capgemini.**
-> Diseñada para: **Iwan Rochus van der Kleijn (Director & Lead Architect en Capgemini).**
+> **Plataforma de Auditoría Regulatoria Continua para Proyectos de IA Enterprise.**
+> *Inspirada en las directrices de arquitectura de Iwan Rochus van der Kleijn (Director & Lead Architect en Capgemini).*
 
 ---
 
@@ -102,7 +102,7 @@ tests/test_ground_truth.py::test_local_regulatory_rag_corpus PASSED
 | **NIS2** | Directiva UE 2022/2555 | `frameworks/nis2_engine.py` (Higiene digital, gestión de cadena de suministro y notificación < 24h). | **Conforme** |
 | **ENS** | Real Decreto 311/2022 | `frameworks/ens_engine.py` y `ccn_stic_engine.py` (Categoría Alta, controles OP.ACC, OP.EXP, MP.SI). | **Conforme** |
 | **EU AI Act** | Reglamento UE 2024/1689 | `frameworks/eu_ai_act_engine.py` (Arts. 9, 10, 12, 14 supervisión humana, y 15 ciberseguridad). | **Conforme** |
-| **CRA** | Cyber Resilience Act | `frameworks/cra_sbom_engine.py` (SBOM CycloneDX v1.5 y trazabilidad de dependencias PURL). | **Conforme** |
+| **CRA** | Cyber Resilience Act | `frameworks/cra_sbom_engine.py` (SBOM CycloneDX v1.5 y análisis PURL). | **Conforme** |
 | **RGPD** | Reglamento UE 2016/679 | `frameworks/rgpd_engine.py` (Anonimización de datos, retención controlada y borrado criptográfico). | **Conforme** |
 
 ## Estructura del Proyecto

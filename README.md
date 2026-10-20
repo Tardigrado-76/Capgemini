@@ -1,24 +1,24 @@
 # CAPGEMINI ENTERPRISE AI WORKBENCH SUITE
-## *Implementación Completa del Paradigma White Coding, Continuous Compliance y Arquitectura Bottom-Up*
+## *Engineering Harness & Testbed para Sistemas de Agentes Enterprise: White Coding, Continuous Compliance y Gobernanza Operativa*
 
-> **Dedicado a Iwan Rochus van der Kleijn** 
-> *Director & Lead Architect en Capgemini (Valencia).* 
-> *Creador del concepto "White Coding", evangelista de la arquitectura de agentes enterprise y azote del "PoC Purgatory".*
+> **Inspirado en la visión arquitectónica de Iwan Rochus van der Kleijn**  
+> *Director & Lead Architect en Capgemini.*  
+> *Pionero del paradigma "White Coding", la arquitectura de sistemas agénticos gobernados y la superación metodológica del "PoC Purgatory".*
 
 ---
 
-## El Manifiesto: De la Pizarra al Código en Producción
+## Fundamentos de Ingeniería: De la Pizarra a la Operación Continua
 
-> *"Iwan: Durante años tus artículos y conferencias dibujaron con una lucidez quirúrgica el mapa de lo que debía ser la inteligencia artificial seria en el mundo empresarial. Nos advertiste a todos:*
+> *"La adopción empresarial de la inteligencia artificial agéntica no se bloquea por falta de capacidad en los modelos, sino por la ausencia de arneses de ingeniería (*engineering harnesses*), contratos formales de contorno y desconexión con la realidad regulatoria y operativa.*
 >
-> 1. *Que el **vibe coding** es una trampa mortal y que la ingeniería exige **White Coding**: pizarra primero, contratos estrictos después, y agentes acotados.*
-> 2. *Que el **PoC Purgatory** se traga el 85% del presupuesto de IA de las empresas porque los prototipos nacen desconectados del compliance legal y de la realidad operativa.*
-> 3. *Que el **prompt-stuffing** en MCP satura la ventana de contexto y que la única vía viable es la divulgación progresiva (**semantic-discovery-loop**).*
-> 4. *Que normativas como **DORA, NIS2, ENS y el EU AI Act** no se pueden auditar con hojas de cálculo un viernes por la tarde, sino que deben ser código vivo, continuo y sellado criptográficamente.*
+> *Este repositorio es un banco de trabajo práctico y modular que materializa cuatro principios de arquitectura esenciales:*
 >
-> *Muchos lo debatieron en LinkedIn. Nosotros nos encerramos a construirlo.*
+> 1. ***White Coding frente a la indeterminación:** El código generado por agentes requiere diseño formal previo en pizarra, contratos de paso inmutables (`StepContracts`) y aislamiento en cajas de arena con verificación adversarial.*
+> 2. ***Superación del PoC Purgatory:** Las iniciativas de agentes aportan valor sostenible cuando incorporan desde el primer día control 4-ojos (HITL), integración nativa con sistemas de registro empresariales (Jira, Confluence, ERPs) y resiliencia ante fallos.*
+> 3. ***Divulgación Progresiva en MCP:** La saturación de la ventana de contexto (*tool-stuffing*) degrada el razonamiento. La respuesta arquitectónica es el descubrimiento semántico jerárquico por capas (Tier 0 a Tier 3).*
+> 4. ***Compliance-as-Code Continuo:** Normativas críticas como DORA, NIS2, ENS y el EU AI Act no pueden gestionarse con auditorías estáticas a posteriori, sino mediante sondas activas, trazabilidad inmutable y sellado criptográfico en tiempo de ejecución.*
 >
-> *Aquí tienes la suite completa. Cada módulo corre de forma independiente con un doble clic, pasa sus suites de pruebas TDD al 100%, y se integra armónicamente bajo el mando de **QGRADE_OS — The Maestro Cockpit**. Lo que dejaste pendiente como visión arquitectónica, hoy está ejecutándose."*
+> *Este proyecto ofrece una referencia de ingeniería reproducible, modular y verificable: cada componente es autónomo, cuenta con suites de pruebas TDD al 100% y se articula bajo la supervisión de un cockpit operativo unificado."*
 
 ---
 

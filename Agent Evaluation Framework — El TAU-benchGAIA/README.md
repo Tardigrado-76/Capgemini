@@ -1,7 +1,7 @@
-# Agent Evaluation Framework — El TAU-bench / GAIA Enterprise
+# Agent Evaluation Framework — TAU-bench & GAIA Enterprise
 
-> **Director & Lead Architect:** Iwan Rochus van der Kleijn (Capgemini Engineering / White Coding Practice) 
-> **Propósito:** Certificación, auditoría adversarial en tiempo de ejecución y stress-testing de agentes de IA autónomos conforme al **Artículo 15 del EU AI Act** (Precisión, Robustez y Ciberseguridad). 
+> **Inspirado en la visión arquitectónica de Iwan Rochus van der Kleijn (Capgemini Engineering / White Coding Practice)**  
+> **Propósito:** Certificación, auditoría adversarial en tiempo de ejecución y stress-testing de agentes de IA autónomos conforme al **Artículo 15 del EU AI Act** (Precisión, Robustez y Ciberseguridad).  
 > **Puerto de Ejecución Dedicado:** `8509`
 
 ---

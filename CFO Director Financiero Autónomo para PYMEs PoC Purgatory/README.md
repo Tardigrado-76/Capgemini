@@ -1,15 +1,15 @@
 # AUTONOMOUS CFO — Director Financiero para PYMEs
-### *El caso de estudio que destruye el "PoC Purgatory": Multi-agente financiero, cumplimiento NIS2/EU AI Act y despliegue real en producción.*
+### *Caso de Estudio Práctico: Superando la Fricción del "PoC Purgatory" mediante Agentes Financieros Acotados y Control HITL*
 
 ---
 
-## ¿Qué es el "PoC Purgatory" y cómo lo superamos?
+## El Reto del "PoC Purgatory" en Procesos Financieros Críticos
 
 > *"En las grandes consultoras y corporaciones, el 85% de las iniciativas de IA mueren en el 'PoC Purgatory': demos vistosas en Jupyter Notebooks que colapsan en cuanto tocan datos sucios, carecen de auditoría legal y requieren un batallón de ingenieros solo para mantenerlas vivas.*
 >
 > *Iwan van der Kleijn propuso la alternativa: el **AI Workbench bottom-up**. Diseñar herramientas locales, acotar estrictamente a los agentes, integrar el compliance desde la primera línea y congelar el resultado en ejecutables autónomos con cero fricción de despliegue.*
 >
-> *Este proyecto es la demostración viviente de que esa filosofía funciona."*
+> *Este componente ilustra de forma práctica cómo aplicar esa disciplina arquitectónica a un dominio financiero real: conciliación bancaria PSD2, extracción contable y salvaguardas de solvencia auditables."*
 
 ---
 
