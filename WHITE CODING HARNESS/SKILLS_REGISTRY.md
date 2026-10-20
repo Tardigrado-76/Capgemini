@@ -1,34 +1,26 @@
-# ⚡ SKILLS_REGISTRY.md — WHITE CODING HARNESS
-## Catálogo y Runbooks de Habilidades para el Confinamiento de Código
+# 🛡️ SKILLS_REGISTRY.md — WHITE CODING HARNESS
+## Catálogo de Habilidades de la Proof Machine & Codebase Design
 
-> **Referencia de Skills:** Documentadas en `SKILLS INSTALADAS EN ANTIGRAVY.docx`  
-> **Directiva:** Rigor formal Red-Green TDD y cero tolerancia a errores estáticos.
-
----
-
-## 1. Matriz de Skills Aplicables a White Coding
-
-| Skill | Categoría | Utilidad Concreta en White Coding | Trigger de Activación |
-| :--- | :--- | :--- | :--- |
-| **`test-driven-development`** | Metodología | Creación de tests unitarios antes de permitir la generación de código (`Red ➔ Green`). | En cada nuevo `StepContract`. |
-| **`systematic-debugging`** | Diagnóstico | Protocolo de 4 fases para investigar la causa raíz de fallos en el evaluador adversarial. | Cuando un test de `pytest` falla durante la evaluación. |
-| **`code-doctor`** | Calidad de Código | Auditoría automática estricta de Python (`ruff`, `mypy`, `bandit`). | Tras cada generación de código por el `BoundedGenerator`. |
-| **`ponytail`** | Ingeniería Senior | Minimización radical de líneas de código generadas, eliminando código defensivo innecesario. | En la fase de escritura y refactorización. |
-| **`verification-before-completion`** | Aseguramiento | Obligación de ejecutar y verificar la salida del comando de prueba antes de reportar éxito. | Antes de cerrar cualquier tarea o emitir veredicto. |
-| **`openspec-*`** | Especificación | Workflow declarativo spec ➔ delta ➔ implementación para gobernar cambios de arquitectura. | Al modificar o añadir un nuevo componente central. |
+> **Sistema:** White Coding Harness (:8506)  
+> **Filosofía:** Pizarra formal → StepContracts SHA-256 → Generación acotada → Sandbox adversarial → Sellado Ed25519.
 
 ---
 
-## 2. Protocolo de Ejecución de TDD Estricto
+## Matriz de Skills
 
-1. **Paso 1 (Red):** El `WhiteboardArchitect` genera el archivo `tests/test_<feature>.py` definiendo los casos de prueba esperados. Ejecución obligatoria confirmando fallo inicial:
-   ```powershell
-   python -m pytest tests/test_<feature>.py -v
-   ```
-2. **Paso 2 (Green):** El `BoundedGenerator` escribe la implementación mínima en `core/<feature>.py` respetando el `StepContract`.
-3. **Paso 3 (Audit):** El `AdversarialEvaluator` corre `code-doctor`:
-   ```powershell
-   python -m ruff check core/<feature>.py --fix
-   python -m bandit -r core/<feature>.py -ll
-   ```
-4. **Paso 4 (Seal):** Con 100% de tests pasando y 0 lints, se sella el hash del diff en el blockchain SHA-256.
+| Skill | Categoría | Rol en el Harness |
+| :--- | :--- | :--- |
+| `test-driven-development` | Metodología Core | Pruebas unitarias antes de la generación (Red → Green → Refactor). |
+| `codebase-design` | Arquitectura | Deletion Test, costuras desacopladas (Matt Pocock), interfaz como superficie de pruebas. |
+| `ecc-code-context` | Indexación AST | Compresión del árbol de código en resúmenes token-densos para evitar context-stuffing. |
+| `openspec-propose` | Especificación | Propuesta estructurada de cambios con todos los artefactos en un solo paso. |
+| `openspec-apply-change` | Implementación | Implementación guiada paso a paso desde una especificación OpenSpec. |
+| `ponytail` | Ingeniería Senior | Eliminación radical de código defensivo redundante. YAGNI estricto. |
+| `code-doctor` | Fiabilidad | Auditoría continua `ruff` + `mypy` + `bandit` + `react-doctor`. Cero tolerancia. |
+| `systematic-debugging` | Diagnóstico | Protocolo de 4 fases: Observar → Hipótesis → Experimento → Verificar. |
+| `verification-before-completion` | Rigor Epistémico | Evidencia empírica obligatoria antes de declarar cualquier trabajo como completado. |
+| `writing-plans` | Planificación | Planes de implementación estructurados para tareas multi-paso. |
+| `jira-rest` | Integración Atlassian | Creación y seguimiento de Épicas e Historias de Usuario mediante REST API. |
+| `confluence-rest` | Documentación Viva | Generación y actualización de páginas de arquitectura en Confluence. |
+| `reverse-engineer-anything` | Ingeniería Inversa | Análisis de binarios y artefactos compilados para validación de contratos. |
+| `langgraph` | Grafos Deterministas | Flujos LLM deterministas con checkpoints para StepContracts complejos. |

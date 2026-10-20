@@ -9,8 +9,6 @@
 
 ## 1. Topología del Enjambre de Agentes
 
-QGRADE_OS opera mediante una arquitectura jerárquica y modular compuesta por agentes especializados con límites de contexto estrictos:
-
 ```mermaid
 graph TD
     User["Operador Humano / CISO"] --> Maestro["Maestro Orchestrator Agent<br/><i>Coordinación Global de Flota</i>"]
@@ -20,16 +18,19 @@ graph TD
         Auditor["Cross-Engine Auditor Agent<br/><i>Síntesis de Postura Enterprise</i>"]
         Crypto["Ledger & Ed25519 Notary Agent<br/><i>Sellado de Evidencias Criptográficas</i>"]
         Dispatcher["Fleet Health & Process Dispatcher<br/><i>Supervisión de Puertos 8501-8510</i>"]
+        HITL["Omnichannel HITL & Incident Dispatcher<br/><i>Chatwoot / LiveChat / Telegram / Discord</i>"]
     end
 
     Maestro --> Sentinel
     Maestro --> Auditor
     Maestro --> Crypto
     Maestro --> Dispatcher
+    Maestro --> HITL
 
     Auditor -->|Consulta Estado| Dispatcher
     Sentinel -->|Cargas Sanitizadas| Maestro
     Crypto -->|Firmas Asimétricas| Auditor
+    HITL -->|Aprobación Humana Art. 14| Maestro
 ```
 
 ---
@@ -37,37 +38,33 @@ graph TD
 ## 2. Roles y Perfiles de Agente
 
 ### A. Maestro Orchestrator Agent
-- **Misión:** Coordinar la flota de los 8 microservicios, interpretar las directivas del operador y consolidar las respuestas del enjambre sin sufrir alucinaciones de dominio cruzado.
-- **Protocolo de Razonamiento:**
-  1. Identificar la intención principal del usuario (salud de flota, auditoría compuesta, firma digital o exportación).
-  2. Verificar precondiciones en los subsistemas antes de delegar tareas.
-  3. Despachar a los subagentes en paralelo cuando no existan dependencias de estado.
-  4. Sintetizar los resultados con evidencia empírica (puertos, códigos de retorno, hashes SHA-256).
+- **Misión:** Coordinar la flota de los 8 microservicios, interpretar las directivas del operador y consolidar las respuestas del enjambre.
+- **Protocolo de Razonamiento:** Identificar intención → verificar precondiciones → despachar en paralelo → sintetizar con evidencia empírica.
 
 ### B. Security & Injection Firewall Agent
-- **Misión:** Inspección previa y sanitización profunda de cualquier entrada externa o retorno de APIs contra indirect prompt injection (OWASP LLM01) y fuga de credenciales.
-- **Invariantes:**
-  - Bloqueo inmediato de patrones heurísticos de escape (`ignore all instructions`, `system override`).
-  - Redacción automática a `[REDACTED_ADVERSARIAL_INJECTION]`.
+- **Misión:** Sanitización profunda contra indirect prompt injection (OWASP LLM01) y fuga de credenciales.
+- **Invariantes:** Bloqueo de patrones de escape. Redacción automática a `[REDACTED_ADVERSARIAL_INJECTION]`.
 
 ### C. Cross-Engine Auditor Agent
-- **Misión:** Ejecutar diagnósticos multidimensionales agregando la postura de White Coding (contratos AST), Compliance Live Mesh (DORA/NIS2/ENS) y economía de tokens de SDP.
-- **Invariantes:**
-  - Ninguna afirmación de cumplimiento es válida sin un hash criptográfico verificable.
+- **Misión:** Diagnósticos multidimensionales agregando White Coding, Compliance y economía de tokens SDP.
+- **Invariantes:** Ninguna afirmación de cumplimiento válida sin hash criptográfico verificable.
 
 ### D. Ledger & Ed25519 Notary Agent
-- **Misión:** Administrar el par de claves Ed25519 y sellar cada dictamen en el árbol de Merkle append-only.
-- **Invariantes:**
-  - Verificación matemática en tiempo constante.
-  - Firma digital de 64 bytes inmutable por cada bloque del ledger.
+- **Misión:** Administrar par de claves Ed25519 y sellar cada dictamen en el árbol de Merkle append-only.
+- **Invariantes:** Verificación matemática en tiempo constante. Firma de 64 bytes inmutable por bloque.
+
+### E. Omnichannel HITL & Incident Dispatcher Agent
+- **Misión:** Transmitir alertas urgentes y solicitudes de aprobación humana (Art. 14 EU AI Act) a canales omnicanal.
+- **Skills:** `chatwoot`, `livechat`, `agent-reach`
+- **Invariantes:** Despacho inmediato ante riesgo crítico. Bloqueo hasta firma digital del operador. Registro auditable.
 
 ---
 
 ## 3. Puertas de Supervisión Humana (HITL Gate - Art. 14 EU AI Act)
 
-Ningún agente de QGRADE_OS puede ejecutar de forma autónoma:
-1. El reinicio forzado de servicios o terminación de procesos en producción.
-2. La rotación o exportación de claves privadas Ed25519.
-3. La alteración de los umbrales de riesgo en las auditorías de cumplimiento.
+Ningún agente puede ejecutar autónomamente:
+1. Reinicio forzado de servicios en producción.
+2. Rotación o exportación de claves privadas Ed25519.
+3. Alteración de umbrales de riesgo en auditorías de cumplimiento.
 
-*Cualquier intento genera una excepción que requiere autorización explícita del operador humano en el Cockpit.*
+*Cualquier intento genera evento firmado por `OmnichannelHITLBridge` requiriendo autorización explícita del operador.*
