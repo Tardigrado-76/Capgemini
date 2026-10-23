@@ -1,8 +1,7 @@
-# CAPGEMINI ENTERPRISE AI WORKBENCH SUITE
+# ENTERPRISE AI WORKBENCH SUITE
 ## *Engineering Harness & Testbed para Sistemas de Agentes Enterprise: White Coding, Continuous Compliance y Gobernanza Operativa*
 
 > **Inspirado en la visión arquitectónica de Iwan Rochus van der Kleijn**  
-> *Director & Lead Architect en Capgemini.*  
 > *Pionero del paradigma "White Coding", la arquitectura de sistemas agénticos gobernados y la superación metodológica del "PoC Purgatory".*
 
 ---
